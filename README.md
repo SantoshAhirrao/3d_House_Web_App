@@ -6,7 +6,7 @@ The website consists of a web page accepting the address entered by user, and re
 Due to free web limitation only renders the 3D plots smaller region of Antwerpen.
 
 Further Improvements Possible:
-The web site can be further improved by accepting user infromation and store it database.
-Store all the tif files for Flanders in cloud database and get the required 3D plot for any address enterd.
+The website can be further improved by accepting user infromation and store it database.
+Store all the tif files for Flanders in cloud database and get the required 3D plot for any address entered.
 
 
