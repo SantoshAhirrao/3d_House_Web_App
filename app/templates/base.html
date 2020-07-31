@@ -1,0 +1,15 @@
+<HTML>
+	<HEAD>
+		{% if title %}
+		<TITLE>{{ title }} - GeoSpace</TITLE>
+		{% else %}
+		<TITLE>Welcome to GeoSpace</TITLE>
+		{% endif %}
+	</HEAD>
+	
+	<BODY>
+		GeoSpace™
+		<a href="{{ url_for("index") }}">Home</a><br>
+		{% block content %}{% endblock %}
+	</BODY>
+</HTML>

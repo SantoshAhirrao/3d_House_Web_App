@@ -1,0 +1,39 @@
+{% extends "signup.html" %}
+{% block form %}
+<form action="" method="post">
+  	{{ form["address"].hidden_tag() }}
+  	<h1>{{ form["address"].header }}</h1>
+	<h3>{{ form["address"].address.label }}<br></h3>
+   <table>
+		<tr>
+			<td>{{ form["address"].address(size=36) }}{{ form["address"].submit() }}</td>
+		</tr>
+		<tr>
+			<td>
+			{{ form["address"].projection() }}
+			{{ form["address"].surroundings.label}}
+			{{ form["address"].surroundings(checked=True)}}
+			</td>
+		</tr>
+		<tr>
+			<td>
+				{{ form["address"].window() }}{{ form["address"].window.label }}
+			</td>
+		</tr>
+	</table>
+
+	<p>
+		Currently in alpha build!<br>
+		Due to hosting issues our application is limited<br>
+		<br>
+		<b>Available addresses:</b><br>
+		<ul>
+			<li>Sint-Pietersvliet 7 Antwerpen</li>
+			<li>Koningin Astridplein 27 Antwerpen</li>
+			<li>Schoenmarkt 35 Antwerpen</li>
+			<li>Molenstraat 52 Sint-Katelijne-Waver</li>
+			<li>Gemeentestraat 21 Duffel</li>
+		</ul>
+		</p>
+</form>
+{% endblock %}

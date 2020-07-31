@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>GeoSpace - Log In or Sign Up</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}?v=10"/>
+	</head>
+	<body>
+		<div id="bar_outer">
+			<div id="bar_inner">
+				<a class="float_left" href="" id="logo_button"><h1>GeoSpace</h1></a>
+					<form class="float_right" id="login_form" action="" method="POST">
+						{{ form["login"].hidden_tag() }}
+						<table id="login_table">
+							<tr>
+								<td>{{ form["login"].username.label }}</td>
+								<td class="float_left">{{ form["login"].password.label }}</td>
+							</tr>
+							<tr>
+								<td>{{ form["login"].username(size=12) }}</td>
+								<td>{{ form["login"].password(size=12) }}</td>
+								<td>{{ form["login"].submit() }}</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><a href="" id="login_forgot">Forgotten Account?</a></td>
+							</tr>
+						</table>
+					</form>
+			</div>
+		</div>
+		<div id="container">
+			<div id="geoloc_form">
+				{% block form %}{% endblock %}
+			</div>
+			<div id="plot_space">
+				<img class="image_container"alt="Chart" height="520" width="640"
+					 src="{{ url_for('static', filename='plot.png') }}?v={{version}}">
+				
+			</div>
+		</div>
+	</body>
+</html>
